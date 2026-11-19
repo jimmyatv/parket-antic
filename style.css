@@ -26,6 +26,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  overflow-x: clip;
 }
 
 body {
@@ -34,6 +35,7 @@ body {
   background-color: var(--white);
   line-height: 1.6;
   overflow-x: clip;
+  width: 100%;
 }
 
 img {
@@ -358,11 +360,13 @@ h1, h2, h3, h4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: right 0.38s cubic-bezier(0.25, 0.8, 0.25, 1);
+  visibility: hidden;
+  transition: right 0.38s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.38s ease;
 }
 
 .mobile-drawer.active {
   right: 0;
+  visibility: visible;
 }
 
 .mobile-nav-list {
@@ -1442,6 +1446,10 @@ h1, h2, h3, h4 {
 
 /* ================= FULL RESPONSIVE (TABLET I MOBILNI) ================= */
 @media (max-width: 1024px) {
+    .reveal-left,
+  .reveal-right {
+    transform: translateY(24px);
+  }
   .top-bar {
     display: none !important;
   }
