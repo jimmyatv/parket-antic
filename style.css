@@ -216,16 +216,18 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 16px 0;
+  padding-top: calc(14px + env(safe-area-inset-top));
+  padding-bottom: 14px;
   background-color: transparent;
-  transition: top 0.3s ease, background-color 0.35s ease, padding 0.3s ease, box-shadow 0.35s ease;
+  transition: background-color 0.35s ease, padding 0.3s ease, box-shadow 0.35s ease;
 }
 
 .site-header.scrolled {
   top: 0;
   background-color: rgba(30, 15, 15, 0.96);
   backdrop-filter: blur(10px);
-  padding: 12px 0;
+  padding-top: calc(12px + env(safe-area-inset-top));
+  padding-bottom: 12px;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
 }
 
@@ -362,7 +364,7 @@ h1, h2, h3, h4 {
   background: var(--dark-bg);
   color: var(--white);
   z-index: 1050;
-  padding: 28px 24px;
+  padding: calc(60px + env(safe-area-inset-top)) 24px 28px; /* <-- PROMENI OVU LINIJU */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1508,7 +1510,7 @@ h1, h2, h3, h4 {
   }
 
   .hero-section {
-    padding: 140px 0 48px;
+    padding: calc(155px + env(safe-area-inset-top)) 0 48px;
   }
 
   .services-grid {
