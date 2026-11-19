@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parket Antic — Postavljanje i renoviranje parketa | Niš</title>
+  <!-- Google Fonts za identičan kondenzovani naslovni i čist tekstualni stil -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================= TOP BAR ================= -->
+  <div class="top-bar" id="home">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Niš, Srbija
+        </span>
+        <a href="mailto:antaantica@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          antaantica@gmail.com
+        </a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.instagram.com/parket_antic/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Parket Antic">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= STICKY HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        PARKET <span>ANTIC</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Glavna navigacija">
+        <ul>
+          <li><a href="#home">Početna</a></li>
+          <li><a href="#about">O nama</a></li>
+          <li><a href="#services">Usluge</a></li>
+          <li><a href="#projects">Projekti</a></li>
+          <li><a href="#testimonials">Utisci</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#contact" class="btn-pill btn-pill-light">
+          <span>ZAKAŽITE TERMIN</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+
+        <!-- Animirani Hamburger (3 linije -> X) -->
+        <button class="hamburger" id="hamburgerBtn" aria-label="Otvori meni" aria-expanded="false">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILNI DRAWER MENI ================= -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <a href="#home" class="logo">PARKET <span>ANTIC</span></a>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="#home" class="mobile-link">Početna</a></li>
+      <li><a href="#about" class="mobile-link">O nama</a></li>
+      <li><a href="#services" class="mobile-link">Usluge</a></li>
+      <li><a href="#projects" class="mobile-link">Projekti</a></li>
+      <li><a href="#testimonials" class="mobile-link">Utisci</a></li>
+      <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-link">Kontakt</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <p>Pozovite nas za ponudu:</p>
+      <a href="tel:+381600595101" class="mobile-phone">060 059 5101</a>
+      <a href="mailto:antaantica@gmail.com" class="mobile-email">antaantica@gmail.com</a>
+    </div>
+  </aside>
+
+  <!-- ================= HERO SEKCIJA ================= -->
+  <section class="hero-section">
+    <!-- ZAMENA SLIKE: Ovde ubaci svoju glavnu Hero sliku parketa -->
+    <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1920&q=80');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-center reveal-up">
+        <h1>TRIDESET GODINA ISKUSTVA U POSTAVLJANJU I RENOVIRANJU DRVENIH PODNIH POVRŠINA</h1>
+        <a href="#contact" class="btn-pill btn-pill-primary">
+          <span>ZATRAŽITE PONUDU</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <!-- 3 Statističke kartice sa animiranim brojačima -->
+      <div class="hero-stats">
+        <div class="stat-card reveal-up" data-delay="0">
+          <div class="stat-number">
+            <span class="counter" data-target="30">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-info">
+            <h3>GODINA ISKUSTVA</h3>
+            <p>Porodična tradicija rada sa drvenim podovima, uz proverene materijale i ručnu preciznost.</p>
+          </div>
+        </div>
+
+        <div class="stat-card reveal-up" data-delay="150">
+          <div class="stat-number">
+            <span class="counter" data-target="500">0</span><span class="stat-suffix">+</span>
+          </div>
+          <div class="stat-info">
+            <h3>ZAVRŠENIH PROJEKATA</h3>
+            <p>Stambeni i poslovni prostori u Nišu i široj okolini, od postavljanja do potpunog renoviranja parketa.</p>
+          </div>
+        </div>
+
+        <div class="stat-card reveal-up" data-delay="300">
+          <div class="stat-number">
+            <span class="counter" data-target="100">0</span><span class="stat-suffix">%</span>
+          </div>
+          <div class="stat-info">
+            <h3>POSVEĆENOST KVALITETU</h3>
+            <p>Svaki posao završavamo uredno, u dogovorenom roku i uz jasnu komunikaciju sa klijentom.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BESKONAČNI MARQUEE ================= -->
+  <section class="marquee-section" aria-label="Usluge traka">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        <span>PARKET</span><i class="marquee-dot"></i>
+        <span>RENOVIRANJE</span><i class="marquee-dot"></i>
+        <span>BRUŠENJE I LAKIRANJE</span><i class="marquee-dot"></i>
+        <span>POSTAVLJANJE</span><i class="marquee-dot"></i>
+        <span>PRIPREMA PODLOGE</span><i class="marquee-dot"></i>
+        <span>PARKET</span><i class="marquee-dot"></i>
+        <span>RENOVIRANJE</span><i class="marquee-dot"></i>
+        <span>BRUŠENJE I LAKIRANJE</span><i class="marquee-dot"></i>
+        <span>POSTAVLJANJE</span><i class="marquee-dot"></i>
+        <span>PRIPREMA PODLOGE</span><i class="marquee-dot"></i>
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        <span>PARKET</span><i class="marquee-dot"></i>
+        <span>RENOVIRANJE</span><i class="marquee-dot"></i>
+        <span>BRUŠENJE I LAKIRANJE</span><i class="marquee-dot"></i>
+        <span>POSTAVLJANJE</span><i class="marquee-dot"></i>
+        <span>PRIPREMA PODLOGE</span><i class="marquee-dot"></i>
+        <span>PARKET</span><i class="marquee-dot"></i>
+        <span>RENOVIRANJE</span><i class="marquee-dot"></i>
+        <span>BRUŠENJE I LAKIRANJE</span><i class="marquee-dot"></i>
+        <span>POSTAVLJANJE</span><i class="marquee-dot"></i>
+        <span>PRIPREMA PODLOGE</span><i class="marquee-dot"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROCES RADA ================= -->
+  <section class="process-section section-padding">
+    <div class="container">
+      <div class="process-wrapper reveal-up">
+        <div class="section-header text-center">
+          <span class="section-tag"><i class="tag-dot"></i> PROCES RADA</span>
+          <h2>JASAN PROCES OD DOGOVORA DO ZAVRŠNOG PREDAO PROSTORA</h2>
+        </div>
+
+        <div class="process-grid">
+          <!-- Kartica 01 -> skroluje do #projects -->
+          <a href="#projects" class="process-card active-card reveal-up" data-delay="0">
+            <div class="process-top">
+              <span class="process-badge">01</span>
+              <span class="process-line"></span>
+            </div>
+            <h3>DOGOVOR I SAVETOVANJE</h3>
+            <p>Pregledamo prostor, stanje postojećeg poda ili podloge i predlažemo optimalno rešenje za postavljanje ili renoviranje parketa.</p>
+            <div class="process-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <span class="process-corner"></span>
+          </a>
+
+          <!-- Kartica 02 -> skroluje do #contact -->
+          <a href="#contact" class="process-card reveal-up" data-delay="150">
+            <div class="process-top">
+              <span class="process-badge">02</span>
+              <span class="process-line"></span>
+            </div>
+            <h3>ZATRAŽITE BESPLATNU PONUDU</h3>
+            <p>Na osnovu dogovora i merenja dajemo ponudu i rokove, uz jasno definisane stavke i uslove.</p>
+            <div class="process-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <span class="process-corner"></span>
+          </a>
+
+          <!-- Kartica 03 -> skroluje do #services -->
+          <a href="#services" class="process-card reveal-up" data-delay="300">
+            <div class="process-top">
+              <span class="process-badge">03</span>
+              <span class="process-line"></span>
+            </div>
+            <h3>UGRADNJA I ZAVRŠNA OBRADA</h3>
+            <p>Postavljamo ili obnavljamo parket, brušimo, lakiramo i predajemo prostor spreman za korišćenje.</p>
+            <div class="process-arrow">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </div>
+            <span class="process-corner"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= O NAMA ================= -->
+  <section class="about-section section-padding" id="about">
+    <div class="container about-grid">
+      <div class="about-content reveal-left">
+        <span class="section-tag"><i class="tag-dot"></i> O NAMA</span>
+        <h2>PARKET ANTIC - PORODIČNA FIRMA IZ NIŠA</h2>
+        <p class="about-desc">
+          Parket Antic je porodična firma koja se već trideset godina bavi postavljanjem i renoviranjem drvenih podnih površina. Radimo u stanovanjima, kućama i poslovnim prostorima, sa naglaskom na kvalitetan materijal, preciznu ugradnju i dugotrajan završni izgled. Za nas je svaki prostor poseban, a cilj nam je da parket izgleda i funkcioniše besprekorno godinama.
+        </p>
+
+        <a href="#services" class="btn-pill btn-pill-primary">
+          <span>SAZNAJTE VIŠE</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+
+        <ul class="about-checklist">
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Postavljanje masivnog i višeslojnog parketa</span>
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Renoviranje, brušenje i lakiranje postojećeg parketa</span>
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            <span>Rad u Nišu i okolini, za domaćinstva i firme</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-media reveal-right">
+        <!-- ZAMENA SLIKE: Glavna gornja desna slika "O nama" -->
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Parket Antic - rad na parketu" />
+        </div>
+        <!-- ZAMENA SLIKE: Manja preklopljena slika dole levo -->
+        <div class="about-img-sub">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Završeni radovi Parket Antic" />
+        </div>
+        <div class="about-exp-badge">
+          <div class="exp-num"><span class="counter" data-target="30">0</span><span>+</span></div>
+          <div class="exp-text">GODINA<br />ISKUSTVA</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NAŠE USLUGE ================= -->
+  <section class="services-section section-padding" id="services">
+    <div class="container">
+      <div class="section-header-row reveal-up">
+        <div>
+          <span class="section-tag"><i class="tag-dot"></i> NAŠE USLUGE</span>
+          <h2>STRUČNO POSTAVLJANJE I OBNOVA PARKETA</h2>
+        </div>
+        <a href="#contact" class="btn-pill btn-pill-primary">
+          <span>POGLEDAJTE USLUGE</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="services-grid">
+        <!-- Usluga 1 -->
+        <article class="service-card reveal-up" data-delay="0">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3>POSTAVLJANJE PARKETA</h3>
+          <p>Precizna ugradnja klasičnog, masivnog i višeslojnog parketa (riblja kost, brodski pod, mozaik) uz kvalitetne lepkove.</p>
+          <div class="service-img-wrap">
+            <span class="service-notch"></span>
+            <!-- ZAMENA SLIKE: Usluga 1 -->
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Postavljanje parketa" />
+          </div>
+        </article>
+
+        <!-- Usluga 2 -->
+        <article class="service-card reveal-up" data-delay="150">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3>RENOVIRANJE I HOBLOVANJE</h3>
+          <p>Mašinsko brušenje (hoblovanje) bez prašine, gitovanje pukotina i vraćanje prirodnog sjaja starom i oštećenom parketu.</p>
+          <div class="service-img-wrap">
+            <span class="service-notch"></span>
+            <!-- ZAMENA SLIKE: Usluga 2 -->
+            <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80" alt="Renoviranje i hoblovanje parketa" />
+          </div>
+        </article>
+
+        <!-- Usluga 3 -->
+        <article class="service-card reveal-up" data-delay="0">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3>LAKIRANJE I ULJENJE</h3>
+          <p>Zaštita drveta visokokvalitetnim dvokomponentnim poliuretanskim ili vodenim lakovima (mat, polumat, visoki sjaj).</p>
+          <div class="service-img-wrap">
+            <span class="service-notch"></span>
+            <!-- ZAMENA SLIKE: Usluga 3 -->
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Lakiranje i uljenje parketa" />
+          </div>
+        </article>
+
+        <!-- Usluga 4 -->
+        <article class="service-card reveal-up" data-delay="150">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 6-6"/></svg>
+          </div>
+          <h3>PRIPREMA PODLOGE I LAJSNE</h3>
+          <p>Merenje vlage, nivelisanje košuljice, postavljanje prajmera i završna ugradnja drvenih i MDF podnih lajsni.</p>
+          <div class="service-img-wrap">
+            <span class="service-notch"></span>
+            <!-- ZAMENA SLIKE: Usluga 4 -->
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Priprema podloge i lajsne" />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJEKTI / GALERIJA (SWIPER + HOVER ZAMENA SLIKE) ================= -->
+  <section class="projects-section section-padding" id="projects">
+    <div class="container">
+      <div class="section-header-row reveal-up">
+        <div>
+          <span class="section-tag"><i class="tag-dot"></i> IZDVOJENI PROJEKTI</span>
+          <h2>REALIZOVANI RADOVI U NIŠU I OKOLINI</h2>
+        </div>
+
+        <div class="swiper-controls">
+          <button class="swiper-btn" id="projPrev" aria-label="Prethodni projekat">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          </button>
+          <button class="swiper-btn" id="projNext" aria-label="Sledeći projekat">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Swiper kontejner -->
+      <div class="projects-swiper reveal-up" id="projectsSwiper">
+        <div class="projects-track" id="projectsTrack">
+
+          <!-- Projekat 1 -->
+          <div class="project-slide">
+            <div class="project-img-box">
+              <!-- ZAMENA SLIKA: Prva slika (default) i druga slika (na hover) -->
+              <img class="img-primary" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Postavljanje hrastovog parketa - pre" />
+              <img class="img-secondary" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Postavljanje hrastovog parketa - posle" />
+            </div>
+            <div class="project-meta">
+              <h3>POSTAVLJANJE HRASTOVOG PARKETA</h3>
+              <p>Stambeni objekat • Centar, Niš</p>
+            </div>
+          </div>
+
+          <!-- Projekat 2 -->
+          <div class="project-slide">
+            <div class="project-img-box">
+              <img class="img-primary" src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=800&q=80" alt="Renoviranje i hoblovanje parketa - faza 1" />
+              <img class="img-secondary" src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Renoviranje i hoblovanje parketa - završeno" />
+            </div>
+            <div class="project-meta">
+              <h3>RENOVIRANJE I HOBLOVANJE</h3>
+              <p>Porodična kuća • Medijana, Niš</p>
+            </div>
+          </div>
+
+          <!-- Projekat 3 -->
+          <div class="project-slide">
+            <div class="project-img-box">
+              <img class="img-primary" src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80" alt="Riblja kost ugradnja - faza 1" />
+              <img class="img-secondary" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Riblja kost ugradnja - završeno" />
+            </div>
+            <div class="project-meta">
+              <h3>UGRADNJA RIBLJE KOSTI</h3>
+              <p>Poslovni prostor • Pantelej, Niš</p>
+            </div>
+          </div>
+
+          <!-- Projekat 4 -->
+          <div class="project-slide">
+            <div class="project-img-box">
+              <img class="img-primary" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Lakiranje visokim sjajem - faza 1" />
+              <img class="img-secondary" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Lakiranje visokim sjajem - završeno" />
+            </div>
+            <div class="project-meta">
+              <h3>BRUŠENJE I MAT LAKIRANJE</h3>
+              <p>Stan • Palilula, Niš</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Paginacija tačkice za galeriju -->
+      <div class="swiper-dots" id="projDots"></div>
+    </div>
+  </section>
+
+  <!-- ================= ZAŠTO IZABRATI NAS ================= -->
+  <section class="why-section section-padding">
+    <div class="container why-grid">
+      <div class="why-image reveal-left">
+        <!-- ZAMENA SLIKE: Slika mašinskog brušenja / rada -->
+        <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80" alt="Mašinsko brušenje parketa" />
+      </div>
+
+      <div class="why-content reveal-right">
+        <span class="section-tag"><i class="tag-dot"></i> ZAŠTO PARKET ANTIC</span>
+        <h2>PRECIZNOST, ISKUSTVO I POŠTOVANJE DOGOVORA</h2>
+        <p class="why-intro">
+          Svakom podu pristupamo sa punom pažnjom, koristeći savremene mašine sa usisavanjem prašine i proverene materijale renomiranih proizvođača.
+        </p>
+
+        <div class="why-features">
+          <div class="why-item">
+            <div class="why-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3>PROVERENI MATERIJALI I LAKOVI</h3>
+              <p>Koristimo isključivo sertifikovane lepkove i lakove visoke otpornosti na habanje.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-item-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h3>TAČNI ROKOVI I ČIST PROSTOR</h3>
+              <p>Poštujemo dogovorene termine i radimo sa mašinama koje minimalizuju prašinu u vašem domu.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-pill btn-pill-primary">
+          <span>ZAKAŽITE PROCENU</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UTISCI KLIJENATA (TESTIMONIALS) ================= -->
+  <section class="testimonials-section section-padding" id="testimonials">
+    <div class="container testimonials-grid">
+      <div class="testimonials-left reveal-left">
+        <span class="section-tag"><i class="tag-dot"></i> UTISCI KLIJENATA</span>
+        <h2>ŠTA KLIJENTI KAŽU O NAŠEM RADU</h2>
+        <button type="button" class="btn-pill btn-pill-primary" id="testimonialNextPill">
+          <span>PROČITAJTE UTISKE</span>
+          <span class="btn-circle">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="testimonial-card reveal-right">
+        <div class="quote-mark">“</div>
+
+        <div class="testimonial-body" id="testimonialBody">
+          <h3 id="testiTitle">KVALITET IZNAD OČEKIVANJA</h3>
+          <p id="testiText">
+            Renoviranje starog parketa urađeno je temeljno - brušenje i lakiranje su vratili pod u odlično stanje. Preporučujem svima koji traže pouzdanog majstora.
+          </p>
+        </div>
+
+        <div class="testimonial-footer">
+          <div class="testi-author">
+            <strong id="testiAuthor">MARKO JOVANOVIĆ</strong>
+            <span id="testiLocation">Palilula, Niš</span>
+          </div>
+
+          <div class="testi-nav">
+            <button type="button" class="testi-arrow-btn" id="testiPrev" aria-label="Prethodni utisak">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            </button>
+            <button type="button" class="testi-arrow-btn" id="testiNext" aria-label="Sledeći utisak">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ (ČESTO POSTAVLJANA PITANJA) ================= -->
+  <section class="faq-section section-padding" id="faq">
+    <div class="container faq-grid">
+      <div class="faq-accordion reveal-left">
+        <div class="faq-item active">
+          <button class="faq-question" aria-expanded="true">
+            <span>KOLIKO TRAJE RENOVIRANJE I LAKIRANJE PARKETA?</span>
+            <span class="faq-toggle">−</span>
+          </button>
+          <div class="faq-answer" style="max-height: 200px;">
+            <p>Za prosečan stan od 50 do 70 m², kompletno hoblovanje, gitovanje i lakiranje u tri sloja obično traje od 2 do 4 dana, u zavisnosti od stanja parketa i vrste laka.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>DA LI SE TOKOM BRUŠENJA STVARA MNOGO PRAŠINE?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Koristimo savremene mašine sa ugrađenim sistemima za usisavanje, čime se preko 95% prašine zadržava direktno u vrećama mašine.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>KOJI LAK PREPORUČUJETE ZA STAMBENE PROSTORE?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Za stambene prostore najčešće preporučujemo dvokomponentne vodene lakove bez neprijatnog mirisa, jer zadržavaju prirodnu boju drveta i izuzetno su otporni na habanje.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>DA LI IZLAZITE NA TEREN RADI BESPLATNE PROCENE?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Da, na teritoriji Niša i okoline dolazimo na adresu, merimo vlagu i površinu i dajemo preciznu i neobavezujuću ponudu.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>KADA SE NAMEŠTAJ MOŽE VRATITI NAKON LAKIRANJA?</span>
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Po podu se može lagano hodati već nakon 24 sata, dok se unošenje težeg nameštaja preporučuje nakon 48 do 72 sata od poslednjeg sloja laka.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-side reveal-right">
+        <span class="section-tag"><i class="tag-dot"></i> ČESTA PITANJA</span>
+        <h2>ODGOVORI NA NAJČEŠĆA PITANJA</h2>
+
+        <div class="faq-cta-box">
+          <h3>IMATE DODATNO PITANJE?</h3>
+          <p>Pozovite nas direktno ili pošaljite upit i rado ćemo vam pomoći savetom oko izbora i održavanja parketa.</p>
+          <a href="#contact" class="btn-pill btn-pill-primary">
+            <span>KONTAKTIRAJTE NAS</span>
+            <span class="btn-circle">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT FORMA IZNAD FOOTERA ================= -->
+  <section class="contact-section section-padding" id="contact">
+    <div class="container">
+      <div class="contact-card reveal-up">
+        <div class="contact-form-side">
+          <span class="section-tag"><i class="tag-dot"></i> KONTAKTIRAJTE NAS</span>
+          <h2>ZATRAŽITE PONUDU ZA PARKET</h2>
+          <p class="contact-sub">Popunite formu ispod i javićemo vam se u najkraćem roku sa procenom i terminom.</p>
+
+          <form id="quoteForm" class="quote-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Ime i prezime *</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Vaše ime" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" placeholder="060 123 4567" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email adresa</label>
+              <input type="email" id="email" name="email" placeholder="vas@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Opis radova (kvadratura, lokacija, usluga) *</label>
+              <textarea id="message" name="message" rows="4" placeholder="Npr. Hoblovanje i lakiranje 45m2 parketa u Nišu..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-pill btn-pill-primary" id="submitBtn">
+              <span>POŠALJITE UPIT</span>
+              <span class="btn-circle">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </span>
+            </button>
+
+            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+
+        <div class="contact-image-side">
+          <!-- ZAMENA SLIKE: Slika drvenog parketa u kontakt kartici -->
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=900&q=80" alt="Parket Antic kontakt" />
+          <div class="contact-floating-badge">
+            <span>BESPLATNA PROCENA NA TERENU</span>
+            <strong>060 059 5101</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a href="#home" class="logo footer-logo">PARKET <span>ANTIC</span></a>
+        <p>Trideset godina porodične tradicije u postavljanju, hoblovanju i lakiranju svih vrsta drvenih podova u Nišu i okolini.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>BRZI LINKOVI</h4>
+        <ul>
+          <li><a href="#home">Početna</a></li>
+          <li><a href="#about">O nama</a></li>
+          <li><a href="#services">Usluge</a></li>
+          <li><a href="#projects">Projekti</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>USLUGE</h4>
+        <ul>
+          <li><a href="#services">Postavljanje parketa</a></li>
+          <li><a href="#services">Renoviranje i hoblovanje</a></li>
+          <li><a href="#services">Lakiranje i uljenje</a></li>
+          <li><a href="#services">Priprema podloge</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>KONTAKT</h4>
+        <ul>
+          <li>Niš, Srbija</li>
+          <li><a href="tel:+381600595101">060 059 5101</a></li>
+          <li><a href="mailto:antaantica@gmail.com">antaantica@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/parket_antic/" target="_blank" rel="noopener noreferrer">Instagram: @parket_antic</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© <span id="currentYear"></span> Parket Antic. Sva prava zadržana.</span>
+        <span>Niš, Srbija</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP DUGME (POJAVLJUJE SE NA > 150px) ================= -->
+  <button class="back-to-top" id="backToTop" aria-label="Nazad na vrh">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
