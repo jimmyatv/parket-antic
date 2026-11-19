@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ================= 1. STICKY HEADER & BACK TO TOP NA 150px ================= */
+  /* ================= 1. STICKY HEADER & BACK TO TOP NA 60px ================= */
   const siteHeader = document.getElementById('siteHeader');
   const backToTopBtn = document.getElementById('backToTop');
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hamburgerBtn.classList.toggle('active', isOpen);
     hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
-    siteHeader.classList.toggle('menu-open', isOpen); // <-- DODAJ OVU LINIJU
+    siteHeader.classList.toggle('menu-open', isOpen);
     mobileDrawer.classList.toggle('active', isOpen);
     mobileDrawer.setAttribute('aria-hidden', String(!isOpen));
     mobileOverlay.classList.toggle('active', isOpen);
@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const update = (currentTime) => {
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease-out efekat
       const eased = 1 - Math.pow(1 - progress, 3);
       counterEl.textContent = Math.floor(eased * target);
 
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   counters.forEach((c) => counterObserver.observe(c));
 
-  /* ================= 4. SWIPER / CAROUSEL ZA PROJEKTE (STRELICE, TAČKICE, DRAG) ================= */
+  /* ================= 4. SWIPER / CAROUSEL ZA PROJEKTE (STRELICE, TAČKICE, SWIPE PALCEM) ================= */
   const swiperContainer = document.getElementById('projectsSwiper');
   const track = document.getElementById('projectsTrack');
   const slides = Array.from(document.querySelectorAll('.project-slide'));
@@ -148,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const goToSlide = (index) => {
     const maxIdx = getMaxIndex();
     currentIndex = Math.max(0, Math.min(index, maxIdx));
-    const slideWidth = slides[0].getBoundingClientRect().width + 24; // 24px gap
+    const slideWidth = slides[0].getBoundingClientRect().width + 24;
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
     updateDots();
   };
@@ -161,18 +160,37 @@ document.addEventListener('DOMContentLoaded', () => {
     goToSlide(currentIndex >= getMaxIndex() ? 0 : currentIndex + 1);
   });
 
-  // Touch / Mouse drag podrška za Swiper
-  let isDragging = false;
+  // Touch (swipe palcem na telefonu) + Mouse drag podrška za Swiper
   let startX = 0;
+  let isMouseDown = false;
 
-  swiperContainer.addEventListener('pointerdown', (e) => {
-    isDragging = true;
+  swiperContainer.addEventListener(
+    'touchstart',
+    (e) => {
+      startX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+
+  swiperContainer.addEventListener(
+    'touchend',
+    (e) => {
+      const endX = e.changedTouches[0].clientX;
+      const diff = endX - startX;
+      if (diff < -40) nextBtn.click();
+      if (diff > 40) prevBtn.click();
+    },
+    { passive: true }
+  );
+
+  swiperContainer.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
     startX = e.clientX;
   });
 
-  window.addEventListener('pointerup', (e) => {
-    if (!isDragging) return;
-    isDragging = false;
+  window.addEventListener('mouseup', (e) => {
+    if (!isMouseDown) return;
+    isMouseDown = false;
     const diff = e.clientX - startX;
     if (diff < -50) nextBtn.click();
     if (diff > 50) prevBtn.click();
@@ -251,7 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
     questionBtn.addEventListener('click', () => {
       const isCurrentlyActive = item.classList.contains('active');
 
-      // Zatvori sve ostale
       faqItems.forEach((other) => {
         other.classList.remove('active');
         other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
@@ -286,7 +303,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Ako želiš automatsko slanje bez otvaranja mail klijenta, registruj besplatan ključ na web3forms.com i nalepi ga ovde:
     const WEB3FORMS_KEY = '';
 
     if (WEB3FORMS_KEY) {
@@ -314,7 +330,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Trenutni front-end odziv + otvaranje email klijenta sa popunjenim podacima
     formStatus.className = 'form-status success';
     formStatus.textContent = 'Hvala! Upit je pripremljen — otvaramo vaš email klijent za slanje.';
 

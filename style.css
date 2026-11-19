@@ -26,6 +26,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -211,7 +212,7 @@ h1, h2, h3, h4 {
 /* ================= STICKY HEADER (POZADINA SE POJAVLJUJE NA > 150px) ================= */
 .site-header {
   position: fixed;
-  top: 36px;
+  top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -302,12 +303,12 @@ h1, h2, h3, h4 {
   z-index: 1200;
 }
 
-.hamburger.active {
+/* .hamburger.active {
   position: fixed;
   top: 28px;
   right: 20px;
   z-index: 1200;
-}
+} */
 
 .site-header.menu-open {
   z-index: 1200;
@@ -884,6 +885,7 @@ h1, h2, h3, h4 {
   overflow: hidden;
   cursor: grab;
   user-select: none;
+  touch-action: pan-y;
 }
 
 .projects-swiper:active {
@@ -1450,6 +1452,9 @@ h1, h2, h3, h4 {
 
 /* ================= FULL RESPONSIVE (TABLET I MOBILNI) ================= */
 @media (max-width: 1024px) {
+    .top-bar {
+        display: none;
+    }
   .desktop-nav,
   .header-actions .btn-pill {
     display: none;
