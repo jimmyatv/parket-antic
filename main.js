@@ -1,7 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ================= 1. STICKY HEADER & BACK TO TOP NA 60px ================= */
+  /* ================= 1. STICKY HEADER, VIEWPORT SYNC & BACK TO TOP NA 60px ================= */
   const siteHeader = document.getElementById('siteHeader');
   const backToTopBtn = document.getElementById('backToTop');
+
+  const syncViewportOffset = () => {
+    if (window.innerWidth <= 1024 && window.visualViewport) {
+      const offsetTop = Math.max(0, window.visualViewport.offsetTop);
+      siteHeader.style.top = `${offsetTop}px`;
+    } else {
+      siteHeader.style.top = '';
+    }
+  };
 
   const handleScroll = () => {
     const scrollY = window.scrollY || window.pageYOffset;
@@ -13,9 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
       siteHeader.classList.remove('scrolled');
       backToTopBtn.classList.remove('visible');
     }
+
+    syncViewportOffset();
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener('scroll', syncViewportOffset, { passive: true });
+    window.visualViewport.addEventListener('resize', syncViewportOffset, { passive: true });
+  }
   handleScroll();
 
   backToTopBtn.addEventListener('click', () => {
@@ -199,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', () => {
     buildDots();
     goToSlide(currentIndex);
+    syncViewportOffset();
   });
 
   buildDots();
